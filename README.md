@@ -1,4 +1,1 @@
-education_app
-=============
-
-This is a online learning platform.
+THis is the final project of CS263.
