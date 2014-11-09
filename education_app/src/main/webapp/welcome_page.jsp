@@ -5,19 +5,47 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Welcome to use Online JAVA learning platform</title>
+<style> 
+body
+{
+background-color:#F0F0F0;
+padding:5px 5px;
+}
+div
+{
+border:2px solid #a1a1a1;
+padding:5px 5px; 
+background:#E0E0E0;
+width:400px;
+border-radius:25px;
+}
+</style>
+<script>
+function displayDate()
+{
+document.getElementById("demo").innerHTML=Date();
+}
+</script>
 </head>
 <body>
-<h1>Learn JAVA the hard way</h1>
-<p>Let's look at the sample of JAVA program, the output of this sample is "Hello World!"</p> 
+<h1>Learn Javascript the hard way</h1>
 <pre>
-public class MyFirstJavaProgram {
+JavaScript is the programming language of the Web.
 
-    public static void main(String []args) {
-       System.out.println("Hello World");
-    }
-} 
+All modern HTML pages are using JavaScript.
+
+JavaScript is easy to learn.
+
+This tutorial will teach you JavaScript from basic to advanced.
 </pre>
-<a href="TableOfContents.jsp">Begin learning JAVA</a><br>
-<a href="relatedresource.jsp">Some related resources</a>
+<div>
+<h3>Example</h3>
+<p >This is my first JavaScript program</p>
+<p id="demo"></p>
+<button type="button" onclick="displayDate()" style="border:1px solid #FF9933 ; background-color:#00FF00">Display Date</button><br><br>
+<a href="Frame.html">Try it yourself</a><br>
+</div>
+
+
 </body>
 </html>

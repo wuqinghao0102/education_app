@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input the html here</title>
+
+</head>
+<body>
+<p>Please input your code below:</p>
+<textarea   id=tx1 rows="22" cols="35"></textarea><br>
+  <input   type=button  value="show"  style="background-color:#00FF00" onclick="test();" >    
+  <script>      
+  function   test()    
+  {     
+	 x=window.open("","display");    
+	 x.document.write(tx1.value); 
+	 x.document.close();
+  }    
+ </script> 
+			
+</body>
+</html>
