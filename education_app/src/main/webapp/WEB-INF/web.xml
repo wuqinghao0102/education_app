@@ -5,15 +5,47 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
         
-  <servlet>
-    <servlet-name>GenerateHTML</servlet-name>
-    <servlet-class>education_app.education_app.GenerateHTML</servlet-class>
+	<servlet>
+		<servlet-name>worker</servlet-name>
+		<servlet-class>education_app.education_app.Worker</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>add</servlet-name>
+		<servlet-class>education_app.education_app.Add</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>readData</servlet-name>
+		<servlet-class>education_app.education_app.ReadData</servlet-class>
+	</servlet>
+	
+	<servlet>
+    <servlet-name>readquiz</servlet-name>
+    <servlet-class>education_app.education_app.ReadQuiz</servlet-class>
   </servlet>
  
   <servlet-mapping>
-    <servlet-name>GenerateHTML</servlet-name>
-    <url-pattern>/generate</url-pattern>
+    <servlet-name>readquiz</servlet-name>
+    <url-pattern>/readquiz</url-pattern>
   </servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>readData</servlet-name>
+		<url-pattern>/readData</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet-mapping>
+		<servlet-name>add</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>worker</servlet-name>
+		<url-pattern>/worker</url-pattern>
+	</servlet-mapping>
+
 <welcome-file-list>
         <welcome-file>welcome_page.jsp</welcome-file>
 </welcome-file-list>
