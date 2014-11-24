@@ -27,6 +27,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Succeed</title>
+<script language="JavaScript" type="text/JavaScript">
+function toggle(targetid){
+    if (document.getElementById){
+        target=document.getElementById(targetid);
+            if (target.style.display=="block"){
+                target.style.display="none";
+            } else {
+                target.style.display="block";
+            }
+    }
+}
+</script>
 </head>
 <body>
 <%
@@ -46,5 +58,12 @@
 
 %>
 <p><%=value%></p>
+<br>
+<hr size="1" color="black" >
+<p>Check the code：</p>
+<input type="button" id="butn" value="Display/Hide" onclick="toggle('div1')" />
+<div id="div1" style="display: none">
+<textarea rows="10" cols="15"><%=value%></textarea>
+</div>
 </body>
 </html>

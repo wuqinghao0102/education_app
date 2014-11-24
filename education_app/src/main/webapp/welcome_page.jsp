@@ -43,7 +43,7 @@ This tutorial will teach you JavaScript from basic to advanced.
 <p >This is my first JavaScript program</p>
 <p id="demo"></p>
 <button type="button" onclick="displayDate()" style="border:1px solid #FF9933 ; background-color:#00FF00">Display Date</button><br><br>
-<a href="Frame.html">Try it yourself</a><br>
+<a href="quiz.html">Try it yourself</a><br>
 </div>
 
 
