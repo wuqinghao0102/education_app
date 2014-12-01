@@ -24,6 +24,28 @@
     <servlet-name>readquiz</servlet-name>
     <servlet-class>education_app.education_app.ReadQuiz</servlet-class>
   </servlet>
+  
+  <servlet>
+    <servlet-name>BlobStore</servlet-name>
+    <servlet-class>education_app.education_app.BlobStore</servlet-class>
+  </servlet>
+  
+   <servlet>
+    <servlet-name>Worker1</servlet-name>
+    <servlet-class>education_app.education_app.Worker1</servlet-class>
+  </servlet>
+  
+ 
+  <servlet-mapping>
+    <servlet-name>Worker1</servlet-name>
+    <url-pattern>/worker1</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet-mapping>
+    <servlet-name>BlobStore</servlet-name>
+    <url-pattern>/blobstore</url-pattern>
+  </servlet-mapping>
+  
  
   <servlet-mapping>
     <servlet-name>readquiz</servlet-name>

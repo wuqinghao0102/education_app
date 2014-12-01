@@ -45,7 +45,6 @@ This tutorial will teach you JavaScript from basic to advanced.
 <button type="button" onclick="displayDate()" style="border:1px solid #FF9933 ; background-color:#00FF00">Display Date</button><br><br>
 <a href="quiz.html">Try it yourself</a><br>
 </div>
-
-
+<a href="source.html">Related Source</a>
 </body>
 </html>

@@ -14,17 +14,7 @@ border-radius:25px;
 </style>
 </head>
 <body>
-<script type="text/javascript" language="javascript">
-    function iFrameHeight() {
-        var ifm= document.getElementById("iframepage");
-        var subWeb = document.frames ? document.frames["iframepage"].document :
-ifm.contentDocument;
-            if(ifm != null && subWeb != null) {
-            ifm.height = subWeb.body.scrollHeight;
-            }
-    }
-
-</script> 
+ 
 <p>Please write your own code, and make the output of your code same with the left part</p>
 <iframe  src="quiztext.jsp?key=<%=request.getParameter("key") %>" name="aaa" width=300 height=600></iframe>
 <iframe  src="input.html" width=300 height=600></iframe>
