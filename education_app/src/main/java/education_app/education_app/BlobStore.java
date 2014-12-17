@@ -35,28 +35,15 @@ public class BlobStore extends HttpServlet{
 	            res.sendRedirect("/");
 	        } else {
 	        	queue.add(withUrl("/worker1").param("filename", req.getParameter("filename")).param("blobkey",blobKey.getKeyString()));
-	            //res.sendRedirect("/serve?blob-key=" + blobKey.getKeyString());
+	            res.sendRedirect("/blobstore?blob-key=" + blobKey.getKeyString());
 	        	//res.getWriter().println(blobKey.getKeyString());
 	        }
 	        }
 	 
 	 public void doGet(HttpServletRequest req, HttpServletResponse res)
 		        throws IOException {   
-		 String filename="";
-		 DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-		 Query alltaskdata = new Query("BlobStore");
-		 List<Entity> results = datastore.prepare(alltaskdata).asList(
-				 FetchOptions.Builder.withLimit(10000));
-		 res.setContentType("text/plain");
-		 for(Entity result: results){
-			 if(result.getKey().getName().equals(req.getParameter("filename"))) filename=result.getProperty("blobkey").toString();
-		 }
-		  while(filename.equals(null)){
-			 for(Entity result: results){
-				 if(result.getKey().getName().equals(req.getParameter("filename"))) filename=result.getProperty("blobkey").toString();
-			 } 
-		 }
-		            BlobKey blobKey1 = new BlobKey(filename);
+		 
+		            BlobKey blobKey1 = new BlobKey(req.getParameter("blob-key"));
 		            blobstoreService.serve(blobKey1, res);
 		        }
 }

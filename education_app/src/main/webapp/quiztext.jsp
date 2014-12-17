@@ -18,8 +18,14 @@
 <%@ page import="com.google.appengine.api.datastore.Key" %>
 <%@ page import="com.google.appengine.api.datastore.KeyFactory" %>
 <%@ page import="com.google.appengine.api.datastore.Query" %>
+<%@ page import="com.google.appengine.api.memcache.ErrorHandlers" %>
+<%@ page import="com.google.appengine.api.memcache.MemcacheService" %>
+<%@ page import="com.google.appengine.api.memcache.MemcacheServiceFactory" %>
+
 <%-- //[END imports]--%>
 <%@ page import="java.util.List" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="java.util.logging.Level" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -42,7 +48,11 @@ function toggle(targetid){
 </head>
 <body>
 <%
- String value="";
+String key = request.getParameter("key");
+MemcacheService syncCache = MemcacheServiceFactory.getMemcacheService();
+syncCache.setErrorHandler(ErrorHandlers.getConsistentLogAndContinue(Level.INFO));
+String value = (String)syncCache.get(key);
+if (value == null) {
  DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 		 Query alltaskdata = new Query("Exercise");
 		 List<Entity> results = datastore.prepare(alltaskdata).asList(
@@ -54,8 +64,9 @@ function toggle(targetid){
 			 for(Entity result: results){
 				 if(result.getKey().getName().equals(request.getParameter("key"))) value=result.getProperty("value").toString();
 			 } 
-		 }
-
+		  }
+			 syncCache.put(key, value);
+}
 %>
 <p><%=value%></p>
 <br>

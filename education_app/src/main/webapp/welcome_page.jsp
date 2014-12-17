@@ -17,7 +17,7 @@ border:2px solid #a1a1a1;
 padding:5px 5px; 
 background:#E0E0E0;
 width:400px;
-border-radius:25px;
+border-radius:5px;
 }
 </style>
 <script>
@@ -29,22 +29,38 @@ document.getElementById("demo").innerHTML=Date();
 </head>
 <body>
 <h1>Learn Javascript the hard way</h1>
-<pre>
-JavaScript is the programming language of the Web.
-
-All modern HTML pages are using JavaScript.
-
-JavaScript is easy to learn.
-
-This tutorial will teach you JavaScript from basic to advanced.
-</pre>
+<p>JavaScript is the programming language of the Web.</p>
+<p>All modern HTML pages are using JavaScript.</p>
+<p>JavaScript is easy to learn.</p>
+<hr>
+<h2>Learn by Examples</h2>
+<p>Examples are better than 1000 words. Examples are often easier to understand 
+than text explanations.</p>
+<p>This tutorial supplements all explanations with clarifying &quot;Try it Yourself&quot; 
+examples.</p>
+<p>
+<table class="lamp"><tr>
+<td>If you try all the examples, you will learn a lot about JavaScript, in a very short time!</td>
+</tr></table>
+<br>
 <div>
 <h3>Example</h3>
 <p >This is my first JavaScript program</p>
 <p id="demo"></p>
 <button type="button" onclick="displayDate()" style="border:1px solid #FF9933 ; background-color:#00FF00">Display Date</button><br><br>
-<a href="quiz.html">Try it yourself</a><br>
+<a href="DisplayDate.html">Try it yourself</a><br>
 </div>
-<a href="source.html">Related Source</a>
+<hr>
+<h2>Why Study JavaScript?</h2>
+<p>JavaScript is one of the <em>3 languages</em> all web developers <em>
+must</em> 
+learn:</p>
+<p>&nbsp;&nbsp; 1. <em>HTML</em> to define the content of web pages</p>
+<p>&nbsp;&nbsp; 2. <em>CSS</em> to specify the layout of web pages</p>
+<p>&nbsp;&nbsp; 3. <em>JavaScript</em> to program the behavior of web pages </p>
+<h1><a href="examples.html">Begin Learning</a></h1><br>
+
+
+
 </body>
 </html>

@@ -4,8 +4,22 @@
 
 </head>
 <body>
-<p>Please input your code below:</p>
-<textarea   id=tx1 rows="22" cols="35"></textarea><br>
+<p>Edit the code:</p>
+<textarea   id=tx1 rows="30" cols="50">
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+</body>
+</html> 
+</textarea><br>
   <input   type=button  value="show"  style="background-color:#00FF00" onclick="test();" >    
   <script>      
   function   test()    

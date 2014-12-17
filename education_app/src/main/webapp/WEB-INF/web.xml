@@ -35,7 +35,17 @@
     <servlet-class>education_app.education_app.Worker1</servlet-class>
   </servlet>
   
+  <servlet>
+    <servlet-name>ReadBlob</servlet-name>
+    <servlet-class>education_app.education_app.ReadBlob</servlet-class>
+  </servlet>
+  
  
+  <servlet-mapping>
+    <servlet-name>ReadBlob</servlet-name>
+    <url-pattern>/readblob</url-pattern>
+  </servlet-mapping>
+  
   <servlet-mapping>
     <servlet-name>Worker1</servlet-name>
     <url-pattern>/worker1</url-pattern>
